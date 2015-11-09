@@ -1,6 +1,5 @@
 <input type="button" class="download"  value="Download"/>
-
-<input id="export_file" type="file" style="display:none" nwworkingdir="" nwsaveas="" />
+<input id="nw_download" type="file" style="display:none" nwworkingdir="" nwsaveas="" />
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script>
   function saveFile(id, filename, base64Image) {
@@ -20,8 +19,8 @@
     chooser.click();
   }
   $('.download').on('click', function() {
-    // var _exportCSV = 'data:image/png;base64,'+
-    var _exportCSV = ''+
+    // var _exportData = 'data:image/png;base64,'+
+    var _exportData = ''+
     'iVBORw0KGgoAAAANSUhEUgAAAssAAADGCAIAAACra1p7AAAe1klEQVR4nO3dV1wU18PG8Vl2YQFB'+
     'QKSIBcSCYsPeayyx9xI1lsQWe9QYjSZq1FgTe4smMRpN/FujbywxxhaMXewK9oIVkd6W5b3YOE5g'+
     'WWZ3BzTw+368OHN25pxjbnwyc4oqLS1NAAAAUJTNmx4AAADIhUgYAABAeSQMAACgPBIGAABQHgkD'+
@@ -163,6 +162,6 @@
     'AABAeSQMAACgPBIGAABQHgkDAAAoj4QBAACUR8IAAADKI2EAAADlkTAAAIDySBgAAEB5JAwAAKA8'+
     'EgYAAFDe/wO4JstFZi7iPQAAAABJRU5ErkJggg==';
 
-    saveFile('#export_file', 'save.png', _exportCSV);
+    saveFile('#nw_download', 'save.png', _exportData);
   });
 </script>
